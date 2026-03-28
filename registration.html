@@ -1061,7 +1061,7 @@
     <div class="main-wrap" id="register-form">
       <div>
         <!-- COUNTDOWN -->
-        <div class="countdown-block">
+        <!-- <div class="countdown-block">
           <div class="countdown-label">Registration Closes In</div>
           <div class="countdown-grid">
             <div class="countdown-unit">
@@ -1095,7 +1095,7 @@
             </svg>
             <span id="deadlineText">Loading deadline...</span>
           </div>
-        </div>
+        </div> -->
 
         <!-- FORM -->
         <div class="form-section">
@@ -1104,6 +1104,9 @@
             <p>
               Fill in all details — shortlisted players will be notified via
               email or whatsapp.
+            </p>
+            <p> 
+              Deadline:- 2 April 12:00 AM
             </p>
           </div>
           <div class="form-embed">
@@ -1587,7 +1590,7 @@
           st.className = "admin-status";
           return;
         }
-        localStorage.setItem(KEY_DEADLINE, new Date(dv).toISOString());
+        localStorage.setItem(KEY_DEADLINE, new Date(dv + ":00").toISOString());
         if (fu) localStorage.setItem(KEY_FORM_URL, fu);
         if (np.trim().length >= 6) {
           localStorage.setItem(KEY_PASSWORD, np.trim());
